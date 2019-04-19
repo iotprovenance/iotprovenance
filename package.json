@@ -1,0 +1,42 @@
+{
+  "name": "iotprovenance",
+  "version": "0.3.2",
+  "description": "An experimental framework for data provenance in the IoT based on smart contracts",
+  "main": "library/index.js",
+  "keywords": [
+    "iot",
+    "provenance",
+    "smartcontract"
+  ],
+  "repository": "git@github.com:iotprovenance/iotprovenance.git",
+  "author": "Anonymous",
+  "license": "MIT",
+  "homepage": "https://github.com/iotprovenance/iotprovenance#readme",
+  "bugs": {
+    "url": "https://github.com/iotprovenance/iotprovenance/issues"
+  },
+  "scripts": {
+    "compile": "rm -rf build; truffle compile",
+    "test": "truffle test --network test",
+    "deploy:dappchain": "rm -rf build; truffle migrate --reset --network dappchain_dev",
+    "deploy:ethereum": "rm -rf build; truffle migrate --reset --network ethereum_dev",
+    "deploy:dappchain:extdev": "truffle migrate --network dappchain_extdev",
+    "deploy:ethereum:rinkeby": "truffle migrate --network ethereum_rinkeby",
+    "deploy:ethereum:ropsten": "truffle migrate --network ethereum_ropsten",
+    "genkey:rinkeby": "node ./scripts/gen-eth-key.js rinkeby",
+    "map-contracts": "node ./scripts/gateway-cli.js map-contracts",
+    "map-accounts": "node ./scripts/gateway-cli.js map-accounts"
+  },
+  "dependencies": {
+    "bignumber.js": "^7.2.1",
+    "bip39": "^2.5.0",
+    "bn.js": "^4.11.8",
+    "ethereumjs-wallet": "^0.6.2",
+    "loom-js": "^1.27.1",
+    "loom-truffle-provider": "^0.8.0",
+    "openzeppelin-solidity": "^1.12.0",
+    "truffle": "^4.1.14",
+    "truffle-hdwallet-provider": "^0.0.6",
+    "web3": "1.0.0-beta.34"
+  }
+}

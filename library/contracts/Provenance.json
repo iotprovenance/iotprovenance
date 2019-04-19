@@ -1,0 +1,1057 @@
+{
+  "contractName": "Provenance",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "_name",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getApproved",
+      "outputs": [
+        {
+          "name": "_operator",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onERC721Received",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenOfOwnerByIndex",
+      "outputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_provId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isProvenance",
+      "outputs": [
+        {
+          "name": "isIndeed",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "requestToken",
+      "outputs": [
+        {
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "exists",
+      "outputs": [
+        {
+          "name": "_exists",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenByIndex",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_uid",
+          "type": "uint256"
+        }
+      ],
+      "name": "mintToGateway",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_provId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getProvenance",
+      "outputs": [
+        {
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "inputProvenanceIds",
+          "type": "uint256[]"
+        },
+        {
+          "name": "context",
+          "type": "string"
+        },
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "numberOfProvenanceRecordsFor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "_balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "provenanceOfTokenByIndex",
+      "outputs": [
+        {
+          "name": "provId",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "_context",
+          "type": "string"
+        },
+        {
+          "name": "_inputProvenanceIds",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "createProvenance",
+      "outputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getProvenanceIdAtIndex",
+      "outputs": [
+        {
+          "name": "provId",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "name": "_symbol",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_provId",
+          "type": "uint256"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "_context",
+          "type": "string"
+        },
+        {
+          "name": "_inputProvenanceIds",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "updateProvenance",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "name": "_approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setApprovalForAll",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getProvenanceCount",
+      "outputs": [
+        {
+          "name": "count",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenURI",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_provId",
+          "type": "uint256"
+        }
+      ],
+      "name": "deleteProvenance",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_operator",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedForAll",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_gateway",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "depositToGateway",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_approved",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_approved",
+          "type": "bool"
+        }
+      ],
+      "name": "ApprovalForAll",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "provId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "inputProvenanceIds",
+          "type": "uint256[]"
+        },
+        {
+          "indexed": false,
+          "name": "context",
+          "type": "string"
+        }
+      ],
+      "name": "CreateProvenanceEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "provId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "inputProvenanceIds",
+          "type": "uint256[]"
+        },
+        {
+          "indexed": false,
+          "name": "context",
+          "type": "string"
+        }
+      ],
+      "name": "UpdateProvenanceEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "provId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "DeleteProvenanceEvent",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.0;\n\nimport \"openzeppelin-solidity/contracts/token/ERC721/ERC721.sol\";\nimport \"openzeppelin-solidity/contracts/token/ERC721/ERC721Receiver.sol\";\nimport \"./ProvenanceCore.sol\";\n\ncontract Provenance is ProvenanceCore, ERC721, ERC721Receiver {\n\n\n\n}\n",
+  "sourcePath": "/Users/martensigwart/Development/IntelliJ/workspace-uni/iotprovenance/contracts/Provenance.sol",
+  "ast": {
+    "absolutePath": "/Users/martensigwart/Development/IntelliJ/workspace-uni/iotprovenance/contracts/Provenance.sol",
+    "exportedSymbols": {
+      "Provenance": [
+        373
+      ]
+    },
+    "id": 374,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 363,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/token/ERC721/ERC721.sol",
+        "file": "openzeppelin-solidity/contracts/token/ERC721/ERC721.sol",
+        "id": 364,
+        "nodeType": "ImportDirective",
+        "scope": 374,
+        "sourceUnit": 1363,
+        "src": "25:65:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/token/ERC721/ERC721Receiver.sol",
+        "file": "openzeppelin-solidity/contracts/token/ERC721/ERC721Receiver.sol",
+        "id": 365,
+        "nodeType": "ImportDirective",
+        "scope": 374,
+        "sourceUnit": 2052,
+        "src": "91:73:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/martensigwart/Development/IntelliJ/workspace-uni/iotprovenance/contracts/ProvenanceCore.sol",
+        "file": "./ProvenanceCore.sol",
+        "id": 366,
+        "nodeType": "ImportDirective",
+        "scope": 374,
+        "sourceUnit": 508,
+        "src": "165:30:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 367,
+              "name": "ProvenanceCore",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 507,
+              "src": "220:14:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ProvenanceCore_$507",
+                "typeString": "contract ProvenanceCore"
+              }
+            },
+            "id": 368,
+            "nodeType": "InheritanceSpecifier",
+            "src": "220:14:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 369,
+              "name": "ERC721",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1362,
+              "src": "236:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC721_$1362",
+                "typeString": "contract ERC721"
+              }
+            },
+            "id": 370,
+            "nodeType": "InheritanceSpecifier",
+            "src": "236:6:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 371,
+              "name": "ERC721Receiver",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2051,
+              "src": "244:14:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC721Receiver_$2051",
+                "typeString": "contract ERC721Receiver"
+              }
+            },
+            "id": 372,
+            "nodeType": "InheritanceSpecifier",
+            "src": "244:14:1"
+          }
+        ],
+        "contractDependencies": [
+          507,
+          1163,
+          1335,
+          1355,
+          1362,
+          1484,
+          2051
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 373,
+        "linearizedBaseContracts": [
+          373,
+          2051,
+          1362,
+          1355,
+          1335,
+          1484,
+          1163,
+          507
+        ],
+        "name": "Provenance",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 374,
+        "src": "197:68:1"
+      }
+    ],
+    "src": "0:266:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/martensigwart/Development/IntelliJ/workspace-uni/iotprovenance/contracts/Provenance.sol",
+    "exportedSymbols": {
+      "Provenance": [
+        373
+      ]
+    },
+    "id": 374,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 363,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/token/ERC721/ERC721.sol",
+        "file": "openzeppelin-solidity/contracts/token/ERC721/ERC721.sol",
+        "id": 364,
+        "nodeType": "ImportDirective",
+        "scope": 374,
+        "sourceUnit": 1363,
+        "src": "25:65:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/token/ERC721/ERC721Receiver.sol",
+        "file": "openzeppelin-solidity/contracts/token/ERC721/ERC721Receiver.sol",
+        "id": 365,
+        "nodeType": "ImportDirective",
+        "scope": 374,
+        "sourceUnit": 2052,
+        "src": "91:73:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/martensigwart/Development/IntelliJ/workspace-uni/iotprovenance/contracts/ProvenanceCore.sol",
+        "file": "./ProvenanceCore.sol",
+        "id": 366,
+        "nodeType": "ImportDirective",
+        "scope": 374,
+        "sourceUnit": 508,
+        "src": "165:30:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 367,
+              "name": "ProvenanceCore",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 507,
+              "src": "220:14:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ProvenanceCore_$507",
+                "typeString": "contract ProvenanceCore"
+              }
+            },
+            "id": 368,
+            "nodeType": "InheritanceSpecifier",
+            "src": "220:14:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 369,
+              "name": "ERC721",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1362,
+              "src": "236:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC721_$1362",
+                "typeString": "contract ERC721"
+              }
+            },
+            "id": 370,
+            "nodeType": "InheritanceSpecifier",
+            "src": "236:6:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 371,
+              "name": "ERC721Receiver",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2051,
+              "src": "244:14:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC721Receiver_$2051",
+                "typeString": "contract ERC721Receiver"
+              }
+            },
+            "id": 372,
+            "nodeType": "InheritanceSpecifier",
+            "src": "244:14:1"
+          }
+        ],
+        "contractDependencies": [
+          507,
+          1163,
+          1335,
+          1355,
+          1362,
+          1484,
+          2051
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 373,
+        "linearizedBaseContracts": [
+          373,
+          2051,
+          1362,
+          1355,
+          1335,
+          1484,
+          1163,
+          507
+        ],
+        "name": "Provenance",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 374,
+        "src": "197:68:1"
+      }
+    ],
+    "src": "0:266:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-11-22T16:05:17.144Z"
+}
